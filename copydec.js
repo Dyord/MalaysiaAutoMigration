@@ -962,14 +962,14 @@ function categoriesFormatter() {
 	const copydeckPetType = copydeckData[12] //old 16
 	const copydeckFoodTypeLocal = 'Chose manualy:'+copydeckData[43] //old 21
 
-	return [[copydeckPetType, copydeckFoodTypeLocal]]
+	return [ copydeckFoodTypeLocal]
 }
 
 function lifestagesFormatter() {
 	const copydeckPetType = copydeckData[12] //old 16
 	const copydeckLifestageLocal = 'Chose manualy:'+copydeckData[49] //old 24
 
-	return [[copydeckLifestageLocal, copydeckPetType]]
+	return [copydeckLifestageLocal]
 }
 
 function ingredientsFormatter() {
@@ -992,7 +992,7 @@ function conditionsFormatter() {
 	const copydeckPetType = copydeckData[12] //old 16
 
 	return conditions.trim().length > 5 && copydeckPetType.trim()
-		? [[conditions, copydeckPetType]]
+		? [conditions] != 'Chose manualy:'
 		: [['- None -']]
 }
 
@@ -1001,7 +1001,7 @@ function specialNeedsFormatter() {
 	const copydeckPetType = copydeckData[12] //old 16
 
 	return specialNeeds.trim().length > 5 && copydeckPetType.trim()
-		? [[specialNeeds, copydeckPetType]]
+		? [specialNeeds] != 'Chose manualy:'
 		: [['- None -']]
 }
 
@@ -1010,7 +1010,7 @@ function rangesFormatter() {
 	const copydeckBrand = copydeckData[10] //old 14
 
 	return copydeckRange.trim() && copydeckBrand.trim()
-		? [[copydeckRange, copydeckBrand]]
+		? [copydeckRange]
 		: []
 }
 
