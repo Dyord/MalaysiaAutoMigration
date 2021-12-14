@@ -491,13 +491,13 @@ async function editInput(node, value) {
 
 			if (flag) {
 				select.style.background = addedColor
-				option.removeAttribute('selected')
-				option.setAttribute('selected', 'selected')
+				//option.removeAttribute('selected')
+				//option.setAttribute('selected', 'selected')
 				matchFound = true
 				break
 			}
 		}
-	}
+	}''
 
 	if (!matchFound) {
 		showFoundedOrNotFoundedValue(node, values, notAddedColor)
