@@ -949,31 +949,31 @@ function feedingGuideFormatter() {
 
 /*TAXONOMY FORMATTERS*/
 function petTypeFormatter() {
-	const copydeckPetType = 'Chose manualy:'+copydeckData[12] //old 16
+	const copydeckPetType = copydeckData[12] //old 16
 	return copydeckPetType
 }
 
 function brandFormatter() {
-	const copydeckBrand = 'Chose manualy:'+copydeckData[10] //old 14
+	const copydeckBrand = copydeckData[10] //old 14
 	return [copydeckBrand]
 }
 
 function categoriesFormatter() {
 	const copydeckPetType = copydeckData[12] //old 16
-	const copydeckFoodTypeLocal = 'Chose manualy:'+copydeckData[43] //old 21
+	const copydeckFoodTypeLocal = copydeckData[43] //old 21
 
-	return [ copydeckFoodTypeLocal]
+	return [[copydeckPetType, copydeckFoodTypeLocal]]
 }
 
 function lifestagesFormatter() {
 	const copydeckPetType = copydeckData[12] //old 16
-	const copydeckLifestageLocal = 'Chose manualy:'+copydeckData[49] //old 24
+	const copydeckLifestageLocal = copydeckData[49] //old 24
 
-	return [copydeckLifestageLocal]
+	return [[copydeckLifestageLocal, copydeckPetType]]
 }
 
 function ingredientsFormatter() {
-	const ingredients = 'Chose manualy:'+copydeckData[51].split(',') //old 26
+	const ingredients = copydeckData[51].split(',') //old 26
 	const copydeckPetType = copydeckData[12] //old 16
 
 	let data = []
@@ -988,29 +988,29 @@ function ingredientsFormatter() {
 }
 
 function conditionsFormatter() {
-	const conditions = 'Chose manualy:'+copydeckData[53].trim() //old 28
+	const conditions = copydeckData[53].trim() //old 28
 	const copydeckPetType = copydeckData[12] //old 16
 
 	return conditions.trim().length > 5 && copydeckPetType.trim()
-		? [conditions] != 'Chose manualy:'
+		? [[conditions, copydeckPetType]]
 		: [['- None -']]
 }
 
 function specialNeedsFormatter() {
-	const specialNeeds = 'Chose manualy:'+copydeckData[55].trim() //old 30
+	const specialNeeds = copydeckData[55].trim() //old 30
 	const copydeckPetType = copydeckData[12] //old 16
 
 	return specialNeeds.trim().length > 5 && copydeckPetType.trim()
-		? [specialNeeds] != 'Chose manualy:'
+		? [[specialNeeds, copydeckPetType]]
 		: [['- None -']]
 }
 
 function rangesFormatter() {
-	const copydeckRange = 'Chose manualy:'+copydeckData[55].trim() //old 20
+	const copydeckRange = copydeckData[55].trim() //old 20
 	const copydeckBrand = copydeckData[10] //old 14
 
 	return copydeckRange.trim() && copydeckBrand.trim()
-		? [copydeckRange]
+		? [[copydeckRange, copydeckBrand]]
 		: []
 }
 
