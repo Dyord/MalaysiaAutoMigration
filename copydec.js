@@ -492,8 +492,8 @@ async function editSelect(node, values) {
 			if (flag) {
 				select.style.background = addedColor
 				option.removeAttribute('selected')
-				//option.setAttribute('selected', 'selected')
-                select.option.setAttribute('selected', 'selected')
+				option.setAttribute('selected', 'selected')
+                //node.querySelector('select').options[1].setAttribute('selected', 'selected')
 				matchFound = true
 				break
 			}
