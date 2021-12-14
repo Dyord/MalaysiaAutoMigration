@@ -476,7 +476,7 @@ async function editInput(node, value) {
 /**
  *Function for editing block like "Newsletter Block" or "PRODUCT SIZE"
  **/
-async function editSelect(node, values) {
+ async function editSelect(node, values) {
 	let select = node.querySelector('select')
 	let matchFound = false
 
@@ -533,7 +533,7 @@ async function editRadioBtn(node, value) {
 /**
  *Function for editing several selects Taxonomy
  **/
-async function editSelectsGroup(node, values, numberOfFields = values.length) {
+ async function editSelectsGroup(node, values, numberOfFields = values.length) {
 	let selectContainers = node.querySelectorAll('.shs-field-container')
 	let numberOfExtraSelects = numberOfFields - selectContainers.length
 	let selectContainer = node.querySelector('.shs-container')
