@@ -1006,7 +1006,7 @@ function specialNeedsFormatter() {
 }
 
 function rangesFormatter() {
-	const copydeckRange = copydeckData[55].trim() //old 20
+	const copydeckRange = copydeckData[45].trim() //old 20
 	const copydeckBrand = copydeckData[10] //old 14
 
 	return copydeckRange.trim() && copydeckBrand.trim()
