@@ -720,10 +720,10 @@ function showConsoleCopydeckBasicData () {
 		"Conditions Local (PPVD only)": copydeckData[54-step],
 		"Special Needs  Local": copydeckData[56-step],
 		"TTT URL Local": copydeckData[7-step],
-		"SEO Title Local": copydeckData[58-step],
-		"SEO Description Local": copydeckData[59-step],
-		"OG Title Local": copydeckData[58-step],
-		"OG Description Local": copydeckData[59-step],
+		"SEO Title Local": copydeckData[59-step],
+		"SEO Description Local": copydeckData[61-step],
+		"OG Title Local": copydeckData[63-step],
+		"OG Description Local": copydeckData[65-step],
 		"Footer Newsletter Local": copydeckData[76],
 		"Taxonomy terms / Tagging Local": copydeckData[78],
 		"Related 4 Prods Local": copydeckData[80],
@@ -1017,19 +1017,19 @@ function rangesFormatter() {
 /*SEO FORMATTERS */
 
 function pageTitleFormatter() {
-	const seoTitle = copydeckData[58-step] //old 66
+	const seoTitle = copydeckData[59-step] //old 66
 	return seoTitle ? seoTitle : ''
 }
 function pageDescriptionFormatter() {
-	const seoDescription = copydeckData[59-step] //old 68
+	const seoDescription = copydeckData[61-step] //old 68
 	return seoDescription ? seoDescription : ''
 }
 function openGraphTitleFormatter() {
-	const seoOGTitle = copydeckData[58-step] //old 70
+	const seoOGTitle = copydeckData[63-step] //old 70
 	return seoOGTitle ? seoOGTitle : ''
 }
 function openGraphDescriptionFormatter() {
-	const seoOGDescription = copydeckData[59-step] //old 72
+	const seoOGDescription = copydeckData[65-step] //old 72
 	return seoOGDescription ? seoOGDescription : ''
 }
 function urlAliasFormatter() {
