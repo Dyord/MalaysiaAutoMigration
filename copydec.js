@@ -931,8 +931,8 @@ function ingredientsAndNutritionFormatter() {
 		: ''
 
 	return [
-		`<p><strong>${translations.ingredients}</strong></p><p>${copydeckIngredients.replace(/\n/g, '<br>')}</p>`,
-		`<p><strong>${translations.nutritionalAdditives}</strong></p><p>${copydeckIngredientsNutritionalAdditives.replace(/\n/g, '<br>')}</p>`,
+		`<p><strong>${translations.ingredients}</strong></p><p>${copydeckIngredients.replace(/\n/g, '<br>').replace(/[;]/gi , '<br>')}</p>`,
+		`<p><strong>${translations.nutritionalAdditives}</strong></p><p>${copydeckIngredientsNutritionalAdditives.replace(/\n/g, '<br>').replace(/[,]/gi , '<br>')}</p>`,
 	]
 }
 
