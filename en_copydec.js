@@ -774,7 +774,7 @@ function bazaavoiceProductIDFormatter() {
 }
 
 function GTINFormatter() {
-	const copydeckGTIN = copydeckData[10-step]
+	const copydeckGTIN = copydeckData[9]
 		.split(' ')[0]
 		.replace(/[^0-9]/gm, '')
 		.trim()
@@ -931,8 +931,8 @@ function ingredientsAndNutritionFormatter() {
 		: ''
 
 	return [
-		`<p><strong>${translations.ingredients}</strong></p><p>${copydeckIngredients.replace(/\n/g, '<br>')}</p>`,
-		`<p><strong>${translations.nutritionalAdditives}</strong></p><p>${copydeckIngredientsNutritionalAdditives.replace(/\n/g, '<br>')}</p>`,
+		`<p><strong>${translations.ingredients}</strong></p><p>${copydeckIngredients.replace(/\n/g , '<br>').replace(/[;]/gi , '<br>')}</p>`,
+		`<p><strong>${translations.nutritionalAdditives}</strong></p><p>${copydeckIngredientsNutritionalAdditives.replace(/\n/g, '<br>').replace(/[;]/gi , '<br>')}</p>`,
 	]
 }
 
