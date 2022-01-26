@@ -757,7 +757,7 @@ function showConsoleCopydeckBasicData () {
 /*CUSTOM FIELDS FORMATTERS*/
 function internalTitleFormatter() {
 	return externalTitleFormatter() && GTINFormatter()
-		? `${GTINFormatter()} ${externalTitleFormatter()}`
+		? `${externalTitleFormatter()}`
 		: ''
 }
 
