@@ -762,7 +762,7 @@ function internalTitleFormatter() {
 }
 
 function externalTitleFormatter() {
-	const copydeckTitle = copydeckData[3-step].trim()
+	const copydeckTitle = copydeckData[4-step].trim()
 	const copydeckBrand = copydeckData[11-step].trim()
 
 	return copydeckTitle ? copydeckTitle : ''
