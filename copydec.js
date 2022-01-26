@@ -257,8 +257,9 @@ function changePage() {
 
 	// ==============Uncheck by default Generate automatic URL alias==========
  	const aliasCheckBox = document.getElementById("snippetIframe").contentWindow.document.querySelector('input[data-drupal-selector="edit-path-0-pathauto"]')
-	if (aliasCheckBox) {
+	 if (aliasCheckBox) {
 		aliasCheckBox.checked = false
+		aliasCheckBox.dispatchEvent(new Event('change'))
 	}
 
 	// Set language select field to market language by default when change page in iframe
@@ -756,9 +757,8 @@ function showConsoleCopydeckBasicData () {
 
 /*CUSTOM FIELDS FORMATTERS*/
 function internalTitleFormatter() {
-	return externalTitleFormatter() && GTINFormatter()
-		? `${GTINFormatter()} ${externalTitleFormatter()}`
-		: ''
+	const internalTitle = copydeckData[3-step].trim()
+	return internalTitle ? internalTitle : ''
 }
 
 function externalTitleFormatter() {
