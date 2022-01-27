@@ -756,11 +756,6 @@ function showConsoleCopydeckBasicData () {
 /*FORMATTERS START*/
 
 /*CUSTOM FIELDS FORMATTERS*/
-function internalTitleFormatter() {
-	return externalTitleFormatter() && GTINFormatter()
-		? `${externalTitleFormatter()}`
-		: ''
-}
 
 function externalTitleFormatter() {
 	const copydeckTitle = copydeckData[4-step].trim()
@@ -774,13 +769,6 @@ function bazaavoiceProductIDFormatter() {
 	return copydeckId.length > 0 && copydeckId !== '0' ? copydeckId : ''
 }
 
-function GTINFormatter() {
-	const copydeckGTIN = copydeckData[9]
-		.split(' ')[0]
-		.replace(/[^0-9]/gm, '')
-		.trim()
-	return copydeckGTIN.length > 0 && copydeckGTIN !== '0' ? copydeckGTIN : ''
-}
 
 function buyNowFusepumpFormatter() {
 	const copydeckBuyNowFusepump = copydeckData[9-step].trim() //.replace(/[^0-9]/gm, '').trim()
