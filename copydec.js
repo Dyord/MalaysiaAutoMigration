@@ -31,11 +31,11 @@ const configJSON = `{
  }`
 
  const translations = {
-	features: "Features",
-	ingredients: "Ingredients",
+	features: "Ciri-Ciri",
+	ingredients: "Ramuan",
 	analyticalConstituents: "Nutrition & Analytical Constituents",
-	nutritionalAdditives: "Nutritional additives",
-	feedingGuide: "Feeding guide"
+	nutritionalAdditives: "Maklumat Pemakanan",
+	feedingGuide: "Panduan Pemakanan"
  }
 /*
  *Snippet GUI start
